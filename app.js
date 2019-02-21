@@ -2,14 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const Keys = require('./secretKey');
 
 const app = express();
 
 const userRoute = require('./api/routes/user');
 const listRoute = require('./api/routes/list');
 
-mongoose.connect((Keys.mongoose.conection ||process.env.MONGO_LINK),
+mongoose.connect(process.env.MONGO_LINK,
     { useNewUrlParser: true })
     .then(console.log('connected'))
     .catch(err=>{
