@@ -7,7 +7,7 @@ const UserSchema = require('../models/user');
 
 const Keys = require('../../secretKey');
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(Keys.sendGrid.password);
+sgMail.setApiKey(process.env.SENDGRID_PASSWORD);
 
 
 

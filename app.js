@@ -9,7 +9,7 @@ const app = express();
 const userRoute = require('./api/routes/user');
 const listRoute = require('./api/routes/list');
 
-mongoose.connect('mongodb://'+Keys.mongoose.userID+':'+Keys.mongoose.password+'@ds123624.mlab.com:23624/to-do',
+mongoose.connect(process.env.MONGO_LINK,
     { useNewUrlParser: true })
     .then(console.log('connected'))
     .catch(err=>{

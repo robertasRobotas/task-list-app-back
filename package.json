@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "to do rest api",
   "main": "index.js",
+  "engines":{
+    "node":"8.12.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "author": "robertas ankudovicius",
   "license": "ISC",
